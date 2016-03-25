@@ -32,7 +32,10 @@ class IPValidator{
 * Regular expression 
 */
 class myRegex {
+    // Combination of digits for single token of the IP address.
+    // 3 zeros | (upto 2 zeros & 1 non-zero digit) | (1 zero & upto 2 non-zero digits) | 2 digits | "24" & 1 digit | 2 & 2 "0-5" digits 
     String numberPattern = "(0{1,3}|0{0,2}[0-9]|0{0,1}[0-9]{1,2}|[1][0-9][0-9]|2[0-4][0-9]|2[0-5][0-5])";
+    // Join the single token expression 4 times.
     String pattern = numberPattern + "." +numberPattern + "." + numberPattern  + "." + numberPattern;
 }
 
